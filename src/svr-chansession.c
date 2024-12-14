@@ -861,7 +861,7 @@ static int ptycommand(struct Channel *channel, struct ChanSess *chansess) {
 
 #if DO_MOTD
 		if (svr_opts.domotd && !chansess->cmd) {
-			/* don't show the motd if /etc/dropbear/.hushlogin exists */
+			/* don't show the motd if etc/dropbear/.hushlogin exists */
 
 			/* 12 == strlen("/.hushlogin\0") */
 			len = strlen(ses.authstate.pw_dir) + 12; 

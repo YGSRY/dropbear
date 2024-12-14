@@ -124,7 +124,7 @@ Print the version
 .TP
 Authorized Keys
 
-/etc/dropbear/.ssh/authorized_keys can be set up to allow remote login with a RSA,
+etc/dropbear/.ssh/authorized_keys can be set up to allow remote login with a RSA,
 ECDSA, Ed25519 or DSS
 key. Each line is of the form
 .TP
@@ -168,7 +168,7 @@ IP addresses.
 Disregard the command provided by the user and always run \fIforced_command\fR.
 The -c command line option overrides this.
 
-The authorized_keys file and its containing /etc/dropbear/.ssh directory must only be
+The authorized_keys file and its containing etc/dropbear/.ssh directory must only be
 writable by the user, otherwise Dropbear will not allow a login using public
 key authentication.
 
@@ -191,7 +191,7 @@ Message Of The Day
 
 By default the file /etc/motd will be printed for any login shell (unless 
 disabled at compile-time). This can also be disabled per-user
-by creating a file /etc/dropbear/.hushlogin .
+by creating a file etc/dropbear/.hushlogin .
 
 .SH ENVIRONMENT VARIABLES
 Dropbear sets the standard variables USER, LOGNAME, HOME, SHELL, PATH, and TERM.

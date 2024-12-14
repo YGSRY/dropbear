@@ -518,7 +518,7 @@ out:
 /* get a line from the file into buffer in the style expected for an
  * authkeys file.
  * Will return DROPBEAR_SUCCESS if data is read, or DROPBEAR_FAILURE on EOF.*/
-/* Only used for /etc/dropbear/.ssh/known_hosts and /etc/dropbear/.ssh/authorized_keys */
+/* Only used for etc/dropbear/.ssh/known_hosts and etc/dropbear/.ssh/authorized_keys */
 #if DROPBEAR_CLIENT || DROPBEAR_SVR_PUBKEY_AUTH
 int buf_getline(buffer * line, FILE * authfile) {
 
@@ -637,11 +637,11 @@ int m_str_to_uint(const char* str, unsigned int *val) {
 	}
 }
 
-/* Returns malloced path. inpath beginning with '/etc/dropbear/' expanded,
+/* Returns malloced path. inpath beginning with 'etc/dropbear/' expanded,
    otherwise returned as-is */
 char * expand_homedir_path(const char *inpath) {
 	struct passwd *pw = NULL;
-	if (strncmp(inpath, "/etc/dropbear/", 2) == 0) {
+	if (strncmp(inpath, "etc/dropbear/", 2) == 0) {
 		char *homedir = getenv("HOME");
 
 		if (!homedir) {

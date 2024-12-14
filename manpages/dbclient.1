@@ -39,7 +39,7 @@ Identity file.
 Read the identity key from file
 .I idfile
 (multiple allowed). This file is created with dropbearkey(1) or converted
-from OpenSSH with dropbearconvert(1). The default path /etc/dropbear/.ssh/id_dropbear is used
+from OpenSSH with dropbearconvert(1). The default path etc/dropbear/.ssh/id_dropbear is used
 .TP
 .B \-L\fR [\fIlistenaddress\fR]:\fIlistenport\fR:\fIhost\fR:\fIport\fR
 Local port forwarding.
@@ -259,7 +259,7 @@ standard input is not a TTY, or the environment variable SSH_ASKPASS_ALWAYS is
 set.
 
 .SH FILES
-.B /etc/dropbear/.ssh/dropbear_config
+.B etc/dropbear/.ssh/dropbear_config
 
 This is the per user configuration file. A very limited subset of the keywords for
 ssh_config(5) is supported, and none of the advanced features. The file contains
@@ -295,7 +295,7 @@ Specifies the user name to login in as.
 .B
 IdentityFile
 Specifies the file with the private key used for public key authentication with the remote
-host. The file must be in the Dropbear format. See dropbearkey(1) to generate one. A '/etc/dropbear/' at
+host. The file must be in the Dropbear format. See dropbearkey(1) to generate one. A 'etc/dropbear/' at
 the start of the path will expanded to the executing user's home directory. A path that
 does not start with '/' will be treated relative to this configuration file's directory. Otherwise
 the path will be used as is.

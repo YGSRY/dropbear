@@ -524,8 +524,8 @@ out:
 
 /* Returns DROPBEAR_SUCCESS if file permissions for pubkeys are ok,
  * DROPBEAR_FAILURE otherwise.
- * Checks that the user's homedir, /etc/dropbear/.ssh, and
- * /etc/dropbear/.ssh/authorized_keys are all owned by either root or the user, and are
+ * Checks that the user's homedir, etc/dropbear/.ssh, and
+ * etc/dropbear/.ssh/authorized_keys are all owned by either root or the user, and are
  * g-w, o-w */
 static int checkpubkeyperms() {
 
@@ -554,13 +554,13 @@ static int checkpubkeyperms() {
 		goto out;
 	}
 
-	/* check /etc/dropbear/.ssh */
+	/* check etc/dropbear/.ssh */
 	strlcat(filename, "/.ssh", len);
 	if (checkfileperm(filename) != DROPBEAR_SUCCESS) {
 		goto out;
 	}
 
-	/* now check /etc/dropbear/.ssh/authorized_keys */
+	/* now check etc/dropbear/.ssh/authorized_keys */
 	strlcat(filename, "/authorized_keys", len);
 	if (checkfileperm(filename) != DROPBEAR_SUCCESS) {
 		goto out;

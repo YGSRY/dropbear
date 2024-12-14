@@ -35,7 +35,7 @@ auth.c			General auth handling, including user checking etc,
 
 authpasswd.c		Handles /etc/passwd or /etc/shadow auth
 
-authpubkey.c		Handles /etc/dropbear/.ssh/authorized_keys auth
+authpubkey.c		Handles etc/dropbear/.ssh/authorized_keys auth
 
 
 Connection  draft-ietf-secsh-connect-17.txt

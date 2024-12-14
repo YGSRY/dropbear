@@ -276,7 +276,7 @@ static FILE* open_known_hosts_file(int * readonly)
 		filename = m_malloc(len + 18); /* "/.ssh/known_hosts" and null-terminator*/
 
 		snprintf(filename, len+18, "%s/.ssh", homedir);
-		/* Check that /etc/dropbear/.ssh exists - easiest way is just to mkdir */
+		/* Check that etc/dropbear/.ssh exists - easiest way is just to mkdir */
 		if (mkdir(filename, S_IRWXU) != 0) {
 			if (errno != EEXIST) {
 				dropbear_log(LOG_INFO, "Warning: failed creating %s/.ssh: %s",
@@ -396,7 +396,7 @@ static void checkhostkey(const unsigned char* keyblob, unsigned int keybloblen) 
 		dropbear_exit("\n\n%s host key mismatch for %s !\n"
 					"Fingerprint is %s\n"
 					"Expected %s\n"
-					"If you know that the host key is correct you can\nremove the bad entry from /etc/dropbear/.ssh/known_hosts", 
+					"If you know that the host key is correct you can\nremove the bad entry from etc/dropbear/.ssh/known_hosts", 
 					algoname,
 					cli_opts.remotehost,
 					sign_key_fingerprint(keyblob, keybloblen),

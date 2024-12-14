@@ -39,7 +39,7 @@ or
 An existing Dropbear or OpenSSH private key file
 .TP
 .I output_file
-The path to write the converted private key file. For client authentication /etc/dropbear/.ssh/id_dropbear is loaded by default
+The path to write the converted private key file. For client authentication etc/dropbear/.ssh/id_dropbear is loaded by default
 .SH SUPPORTED FORMATS
 .B dropbearconvert
 can read OpenSSH format files, and older PEM format files (
@@ -50,7 +50,7 @@ can read OpenSSH format files, and older PEM format files (
 will write OpenSSH format files, usable with OpenSSH 6.5 and later.
 Reading OpenSSH format DSS files or PKCS8 files is not currently supported.
 .SH EXAMPLE
- # dropbearconvert openssh dropbear /etc/dropbear/.ssh/id_rsa /etc/dropbear/.ssh/id_dropbear
+ # dropbearconvert openssh dropbear etc/dropbear/.ssh/id_rsa etc/dropbear/.ssh/id_dropbear
 .SH AUTHOR
 Matt Johnston (matt@ucc.asn.au).
 .SH SEE ALSO

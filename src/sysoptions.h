@@ -115,7 +115,7 @@
 
 /* Default per client configuration file.
 */
-#define DROPBEAR_DEFAULT_SSH_CONFIG "/etc/dropbear/.ssh/dropbear_config"
+#define DROPBEAR_DEFAULT_SSH_CONFIG "etc/dropbear/.ssh/dropbear_config"
 
 #define DROPBEAR_NGROUP_MAX 1024
 

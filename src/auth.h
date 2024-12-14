@@ -115,7 +115,7 @@ struct AuthState {
 							  meanings). */
 
 	unsigned int perm_warn; /* Server only, set if bad permissions on 
-							   /etc/dropbear/.ssh/authorized_keys have already been
+							   etc/dropbear/.ssh/authorized_keys have already been
 							   logged. */
 	unsigned int checkusername_failed;  /* Server only, set if checkusername
 	                                has already failed */

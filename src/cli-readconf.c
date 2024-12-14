@@ -142,7 +142,7 @@ void read_config_file(char* filename, FILE* config_file, cli_runopts* options) {
 				case opIdentityFile: {
 #if DROPBEAR_CLI_PUBKEY_AUTH
 					char* key_file_path;
-					if (strncmp(cfg_val, "/etc/dropbear/", 2) == 0) {
+					if (strncmp(cfg_val, "etc/dropbear/", 2) == 0) {
 						key_file_path = expand_homedir_path(cfg_val);
 					} else if (cfg_val[0] != '/') {
 						char* config_dir = dirname(filename);
